@@ -10,27 +10,27 @@ namespace Game2
     class SceneManager
     {
         //Add levels scenes to list
-        IList<Scene> scenes = new List<Scene>();
-
-        public void Initialize()
+        IList<IScene> scenes = new List<IScene>();
+        BattleScene bettle = new BattleScene();
+        public void Initialize(GraphicsDevice graphicsDevice)
         {
             AddScenes();
             for(int i = 0; i < scenes.Count; i++)
             {
-                scenes[i].Initialize();
+                scenes[i].Initialize(graphicsDevice);
             }
         }
 
         //adds scenes to the list of scenes
         void AddScenes()
         {
-
+            scenes.Add(bettle);
         }
-        public void LoadContent()
+        public void LoadContent(ContentManager Content)
         {
             for (int i = 0; i < scenes.Count; i++)
             {
-                scenes[i].LoadContent();
+                scenes[i].LoadContent(Content);
             }
         }
 

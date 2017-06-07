@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Content;
 
 namespace Game2
 {
     class DynamicText
     {
-        Color Textcolor;
-        string text;
+        Color Textcolor = Color.White;
+        string text = "";
         SpriteFont font;
         int x;
         int y;
@@ -20,6 +21,13 @@ namespace Game2
         int numberValue;
         bool valueSet = false;
         float fontScale = 1;
+
+        public DynamicText(string _text, SpriteFont _font)
+        {
+            text = _text;
+            font = _font;
+            valueSet = false;
+        }
 
         public DynamicText(string _text, SpriteFont _font, Color _textCol, int _x, int _y)
         {

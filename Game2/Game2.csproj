@@ -58,10 +58,12 @@
     <Compile Include="RegyAPI\UI\Button.cs" />
     <Compile Include="RegyAPI\UI\Shapes.cs" />
     <Compile Include="RegyAPI\UI\SquareShape.cs" />
+    <Compile Include="RegyAPI\UI\UI.cs" />
     <Compile Include="RegyAPI\UI\UISprite.cs" />
     <Compile Include="RegyAPI\Utility.cs" />
     <Compile Include="Scenes\BattleScene.cs" />
     <Compile Include="Scenes\IScene.cs" />
+    <Compile Include="Scenes\SceneBase.cs" />
     <Compile Include="Scenes\SceneManager.cs" />
   </ItemGroup>
   <ItemGroup>

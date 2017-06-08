@@ -17,8 +17,8 @@ namespace Game2
         float x;
         float y;
         float scale = 1f;
-        int spriteWidth;
-        int spriteHeight;
+        int spriteWidth = 10;
+        int spriteHeight= 10;
         float depth;
         
         public UISprite(Texture2D _texture)

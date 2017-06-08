@@ -11,9 +11,8 @@ namespace Game2
 {
     class BattleScene : IScene
     {
-        GraphicsDevice graphicsDevice; //= GameServices.GetService<GraphicsDevice>();
+        GraphicsDevice graphicsDevice;
         Game1 game1 = GameServices.GetService<Game1>();
-        //ContentManager Content = GameServices.GetService<Game1>().Content;
         Utility utility = new Utility();
         SpriteFont gillbertFont;
         Color fontColor;
@@ -32,9 +31,9 @@ namespace Game2
         Button buttonItem;
         List<Button> buttons;
         int gold = 16327;
+        UI uiItem = new UI();
 
 
-       
 
         public void Initialize(GraphicsDevice _graphicsDevice)
         {
@@ -79,6 +78,7 @@ namespace Game2
             fight.Scale = 1.10f;
             fight.Rotation = -0.11f;
             gilb.Rotation = -0.09f;
+            uiItem.Button(peach, 0, 0);
         }
 
         public void UnloadContent ()
@@ -110,8 +110,10 @@ namespace Game2
         {
 
         }
+
         public void DrawGui(SpriteBatch spriteBatch)
         {
+            uiItem.Draw(spriteBatch);
             uiBackSprite.Draw(spriteBatch);
             for (int i = 0; i < buttons.Count; i++)
             {
